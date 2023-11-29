@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e5e5;
+  font-size: 80.5%;
+}
+body > header {
+  background-color: #111;
+  color: white;
+  font-size: 2rem;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+body > main {
+  background-color: #e5e5e5;
+  padding: 0 30px;
+}
+body > main .titulo-pagina {
+  padding: 50px 0;
+  text-align: center;
+  font-size: 2.5rem;
+}
+body > main .conteudo {
+  display: flex;
+}
+body > main .conteudo section {
+  flex: 1;
+  background-color: #e5e5e5;
+}
+body > main .conteudo aside {
+  min-width: 250px;
+}
+body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 30px;
+}
+body table thead tr {
+  border-bottom: 2px solid #ccc;
+}
+body table thead th {
+  text-align: left;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  color: #666;
+}
+body table tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+body table tbody tr:last-child {
+  border: 0;
+}
+body table tbody tr td {
+  padding: 18px 0px;
+  font-size: 17px;
+  margin-right: 9rem;
+}
+body .produto {
+  display: flex;
+  align-items: center;
+}
+body .produto img {
+  border-radius: 6px;
+}
+body .produto .info {
+  margin-left: 1.7rem;
+}
+body .produto .info .produto-nome {
+  font-size: 25px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.qtd {
+  background-color: #eee;
+  display: inline-flex;
+  padding: 0 0;
+  height: 26px;
+  overflow: hidden;
+  justify-content: space-around;
+  min-width: 50px;
+  align-items: center;
+  border-radius: 20px;
+}
+.qtd span {
+  margin: 0 10px;
+}
+.qtd button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  padding: 0 10px;
+  height: 100%;
+  font-size: 16px;
+}
+.qtd button:hover {
+  background-color: #ddd;
+  transition: all 200ms;
+}
+
+.delete {
+  background-color: #ae0f07;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+}
+.delete:hover {
+  background-color: #e04b4b;
+  transition: all 400ms;
+}
+
+aside {
+  margin-left: 4rem;
+}
+aside .box {
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: solid 1px #ccc;
+  background-color: #ddd;
+  font-size: 14px;
+  font-weight: 100;
+}
+aside .box header {
+  padding: 15px 20px;
+  font-size: 25px;
+  font-weight: 100;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+aside .box .info {
+  padding: 20px;
+}
+aside .box .info > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  color: #333;
+}
+aside .box footer {
+  background-color: #d1d1d1;
+  padding: 15px 20px;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+aside > button {
+  border-radius: 12px;
+  border: 0;
+  padding: 15px 0;
+  color: white;
+  background-color: #28a745;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+aside > button:hover {
+  background-color: #3bc55b;
+  transition: all 300ms;
+}/*# sourceMappingURL=style.css.map */

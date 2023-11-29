@@ -1,0 +1,210 @@
+//box icons para pegar os icones de carrinho e tals
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f6f6;
+    font-size: 80.5%;
+
+    > header {
+        background-color: #111;
+        color: white;
+        font-size: 2rem;
+        padding: 20px 0px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    > main {
+        background-color: #fff;
+        padding: 0 30px;
+
+        .titulo-pagina {
+            padding: 50px 0;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .conteudo {
+            display: flex;
+
+            section {
+                flex: 1;
+                background-color: white;
+            }
+
+            aside {
+                min-width: 250px;
+            }
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 30px;
+
+        thead {
+            tr {
+                border-bottom: 2px solid #ccc;
+            }
+
+            th {
+                text-align: left;
+                padding-bottom: 6px;
+                text-transform: uppercase;
+                color: #666;
+            }
+        }
+
+        tbody {
+            tr {
+                border-bottom: 1px solid #ccc;
+
+                &:last-child {
+                    border: 0;
+                }
+
+                td {
+                    padding: 18px 0px;
+                    font-size: 17px;
+                    margin-right: 9rem;
+                }
+            }
+        }
+    }
+
+    .produto {
+        display: flex;
+        align-items: center;
+
+        img {
+            border-radius: 6px;
+        }
+
+        .info {
+            margin-left: 1.7rem;
+
+            .produto-nome {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+.qtd {
+    background-color: #eee;
+    display: inline-flex;
+    padding: 0 0;
+    height: 26px;
+    overflow: hidden;
+    justify-content: space-around;
+    min-width: 50px;
+    align-items: center;
+    border-radius: 20px;
+
+    span {
+        margin: 0 10px;
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: 0;
+        padding: 0 10px;
+        height: 100%;
+        font-size: 16px;
+
+        &:hover {
+            background-color: #ddd;
+            transition: all 200ms;
+        }
+    }
+}
+
+.delete {
+    background-color: #ae0f07;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+
+    &:hover {
+        background-color: #e04b4b;
+        transition: all 400ms;
+    }
+}
+
+aside {
+    margin-left: 4rem;
+
+    .box {
+        border-radius: 12px;
+        margin-bottom: 15px;
+        border: solid 1px #ccc;
+        background-color: #ddd;
+        font-size: 14px;
+        font-weight: 100;
+
+        header {
+            padding: 15px 20px;
+            font-size: 25px;
+            font-weight: 100;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .info {
+            padding: 20px;
+
+            > div {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 6px;
+                color: #333;
+            }
+
+        }
+
+        footer {
+            background-color: #d1d1d1;
+            padding: 15px 20px;
+            font-size: 22px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    > button {
+        border-radius: 12px;
+        border: 0;
+        padding: 15px 0;
+        color: white;
+        background-color: #28a745;
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 16px;
+
+        &:hover {
+            background-color: #3bc55b;
+            transition: all 300ms;
+        }
+    }
+}
