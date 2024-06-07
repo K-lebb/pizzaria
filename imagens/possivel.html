@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizzaria Delícia</title>
+  <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar__brand">
+      <img class="navbar__logo" src="imagens/logo.png" alt="Pizzaria Shop logo" />
+      <p class="navbar__title">Pizzaria <span>Delícia</span></p>
+    </div>
+
+    <ul class="navbar__links">
+      <li><a href="carrinho/index.html"><i class='bx bx-cart'></i></a></li>
+      <li><a href="#menu">cardápio</a></li>
+      <li><a href="#drinks">bebidas</a></li>
+      <li><a href="#location">localização</a></li>
+    </ul>
+
+    <button id="menuCelular" class="menu-celular" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+      <svg width="100" height="100" viewBox="0 0 100 100">
+        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+        <path class="line line2" d="M 20,50 H 80" />
+        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+      </svg>
+    </button>
+  </nav>
+
+  <section class="hero-header">
+    <div class="hero-header__container">
+      <div class="hero-header__content">
+        <h1 class="section__title">
+          Comeu <span>Uma vez</span><br/> virou <span>freguês</span>
+        </h1>
+      </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div>
+      <h2 class="section__title">cardápio</h2>
+      <p class="section__subtitle">
+        Nossas Pizzas, feitas <span>especialmente</span> para você!
+      </p>
+    </div>
+
+    <div class="drinks" id="drinksID">
+      <div class="drinks__container">
+        <div class="drinks__items">
+          <h2>Resumo da compra</h2>
+            <ul id="cart-items"></ul>
+            <p id="total">Total:</p>
+        </div>
+        <a href="carrinho/index.html"><button class="button button--primary card__price " id="finalizar">Deseja finalizar?</button></a>
+      </div>
+    </div>
+
+    <div class="menu__cards">
+
+      <form action="carrinho/carrinho.php" method="post">
+        <input type="hidden" name="pizza_nome" value="Pizza de Calabresa">
+        <input type="hidden" name="pizza_valor" value="90.00">
+        <div class="card">
+          <p class="card__title">Frango</p>
+          <ul class="card__ingredients">
+            <li>Frango</li>
+            <li>Queijo</li>
+            <li>Ovo Cozido</li>
+            <li>cebola roxa</li>
+            <li>Azeitona</li>
+            <li>Borda Recheada de Catupiry ou Cheddar</li>
+          </ul>
+          <button class="button button--primary card__price" onclick="adicionarAoCarrinho('Frango ', 18)">R$18,00</button>
+        </div>
+      </form>
+
+      <div class="card">
+        <p class="card__title">Calabresa</p>
+
+        <ul class="card__ingredients">
+          <li>Mussarela</li>
+          <li>Presunto</li>
+          <li>Calabresa</li>
+          <li>cebola roxa</li>
+          <li>Azeitona</li>
+          <li>Borda Recheada de Catupiry ou Cheddar</li>
+        </ul>
+
+        <button class="button button--primary card__price"
+          onclick="adicionarAoCarrinho('Portuguesa ', 20)">R$20,00</button>
+      </div>
+
+      <div class="card">
+        <p class="card__title">Mista</p>
+
+        <ul class="card__ingredients">
+          <li>Queijo</li>
+          <li>Presunto</li>
+          <li>cebola roxa</li>
+          <li>Borda Recheada de Catupiry ou Cheddar</li>
+        </ul>
+
+        <button class="button button--primary card__price" onclick="adicionarAoCarrinho('Mista ', 18)">R$18,00</button>
+      </div>
+
+      <div class="card">
+        <p class="card__title">Carne do sol</p>
+
+        <ul class="card__ingredients">
+          <li>Queijo</li>
+          <li>Carne do sol</li>
+          <li>cebola roxa</li>
+          <li>Borda Recheada de Catupiry ou Cheddar</li>
+        </ul>
+
+        <button class="button button--primary card__price"
+          onclick="adicionarAoCarrinho('Carne do sol', 30)">R$30,00</button>
+      </div>
+    </div>
+    </div>
+
+
+
+    <div>
+      <h2 class="section__title">bebidas</h2>
+      <p class="section__subtitle">
+        Nossa seleção especial de bebidas para acompanhar nossos hambúrgueres.
+      </p>
+    </div>
+
+
+    <div class="drinks" id="drinks">
+      <div class="drinks__container">
+        <div class="drinks__items">
+          <div class="cart">
+            <table>
+              <thead>
+                  <tr>
+                      <th>Produto</th>
+                      <th>Preço</th>
+                      <th>Quantidade</th>
+                      <th>Total</th>
+                      <th>-</th>
+  
+                  </tr>
+              <tbody>
+                  <tr>
+                      <td>
+                          <div class="produto">
+                              <img src="https://picsum.photos/70/80" alt="">
+                              <div class="info">
+                                  <div class="produto-nome"><b>Nome da pizza</b></div>
+                              </div>
+                          </div>
+                      </td>
+                      <td>R$ 20</td>
+                      <td>
+                          <div class="qtd">
+                              <button><i class='bx bx-minus'></i></button>
+                              <span>1</span>
+                              <button><i class='bx bx-plus'></i></button>
+                          </div>
+                      </td>
+                      <td>R$ 40</td>
+                      <td>
+                          <button class="delete"><i class='bx bx-x'></i></button>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <div class="produto">
+                              <img src="https://picsum.photos/70/80" alt="">
+                              <div class="info">
+                                  <div class="produto-nome"><b>Nome da pizza</b></div>
+                              </div>
+                          </div>
+                      </td>
+                      <td>R$ 20</td>
+                      <td>
+                          <div class="qtd">
+                              <button><i class='bx bx-minus'></i></button>
+                              <span>1</span>
+                              <button><i class='bx bx-plus'></i></button>
+                          </div>
+                      </td>
+                      <td>R$ 40</td>
+                      <td>
+                          <button class="delete"><i class='bx bx-x'></i></button>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <div class="produto">
+                              <img src="https://picsum.photos/70/80" alt="">
+                              <div class="info">
+                                  <div class="produto-nome"><b>Nome da pizza</b></div>
+                              </div>
+                          </div>
+                      </td>
+                      <td>R$ 20</td>
+                      <td>
+                          <div class="qtd">
+                              <button><i class='bx bx-minus'></i></button>
+                              <span>1</span>
+                              <button><i class='bx bx-plus'></i></button>
+                          </div>
+                      </td>
+                      <td>R$ 40</td>
+                      <td>
+                          <button class="delete"><i class='bx bx-x'></i></button>
+                      </td>
+                  </tr>
+              </tbody>
+              </thead>
+          </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </section>
+
+
+
+  <section class="location" id="location">
+    <div>
+      <h2 class="section__title">localização</h2>
+      <p class="section__subtitle">veja como é fácil vir até o deburguer</p>
+    </div>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1071.9446891581472!2d-38.58392488992443!3d-3.700348181617408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74a0906b18879%3A0x82dd43379c4affb6!2sEscola%20Estadual%20de%20Educa%C3%A7%C3%A3o%20Profissional%20Paulo%20Petrola!5e0!3m2!1spt-BR!2sbr!4v1700583801187!5m2!1spt-BR!2sbr"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <p class="location__address">T. Castelo s/n</p>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div>
+        <h2 class="section__title">peça <span>agora mesmo</span>!</h2>
+        <p class="section__subtitle">entregamos em toda cidade</p>
+      </div>
+
+      <button class="button button--primary">pedir a sua pizza da Pizzaria Delícia</button>
+    </div>
+  </footer>
+  <div class="root"></div>
+  <script type="module" src="carrinho/carrinho.jsx"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

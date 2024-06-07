@@ -1,38 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@400;500;700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/brush');
-@import url('https://fonts.cdnfonts.com/css/cupid-love-2');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/brush");
+@import url("https://fonts.cdnfonts.com/css/cupid-love-2");
 
-  * {
-    scroll-behavior: smooth;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  li {
-    list-style: none;
-  }
-  
-  :root {
-    --black: #000;
-    --gray-100: #e5e5e5;
-    --gray-900: #14100c;
-    --primary: #dd2d2d;
-    --white: #fff;
-  }
-  
-  .navbar {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--black);
-    padding: 20px 36px;
-    font-family: 'Cupid Love', sans-serif;
-    gap: 20px;
-    z-index: 1;
-  }
+* {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --black: #000;
+  --gray-100: #e5e5e5;
+  --gray-900: #14100c;
+  --primary: #dd2d2d;
+  --white: #fff;
+}
+
+main {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--black);
+  padding: 20px 36px;
+  font-family: "Cupid Love", sans-serif;
+  gap: 20px;
+  z-index: 1;
+}
 
 #finalizar {
   margin: 0;
@@ -48,154 +50,68 @@
   align-items: center;
 }
 
-  
-  .navbar__title {
-    color: var(--white);
-    font-size: 40px;
-    line-height: 44px;
-    text-transform: uppercase;
-    text-align: center;
-    transition: all 200ms ease-in;
-  }
-  
-  .navbar__brand {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
+.navbar__title {
+  color: var(--white);
+  font-size: 40px;
+  line-height: 44px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 200ms ease-in;
+}
 
-  .navbar__brand img {
-    height: 3rem;
-    width: 3rem;
-  }
-  
-  .navbar__title span {
-    color: var(--primary);
-  }
-  
-  .navbar__links {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
-  
-  .navbar__links li a {
-    color: var(--white);
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 20px;
-    transition: all 200ms;
-  }
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 
-  .navbar__links li a:hover {
-    color: #a91414;
-  }
+.navbar__brand img {
+  height: 3rem;
+  width: 3rem;
+}
 
-  .navbar__links li a i {
-    font-size: 30px;
-    color:#fff
-  }
+.navbar__title span {
+  color: var(--primary);
+}
 
-  .navbar__links li a i:hover {
-    color: #a91414;
-  }
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 
-  
-  .navbar__links li a,
-  .navbar__links .button {
-    font-size: 30px;
-    line-height: 34px;
-  }
-  
-  .navbar__links .button {
-    text-transform: uppercase;
-  }
-  
-  @media (max-width: 1080px) {
+.navbar__links li a {
+  color: var(--white);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 200ms;
+}
 
-    .navbar,
-    .navbar__brand {
-      flex-direction: column;
-    }
-  
-    .navbar__links {
-      gap: 20px;
-    }
-    
+.navbar__links li a:hover {
+  color: #a91414;
+}
 
-  }
+.navbar__links li a i {
+  font-size: 30px;
+  color: #fff;
+}
 
-  @media (min-width: 900px ) {
-    .menu-celular {
-      display: none;
-    }
-  }
+.navbar__links li a i:hover {
+  color: #a91414;
+}
 
-  
-  @media (max-width: 767px) {
-    .navbar__links {
-      flex-direction: column;
-      display: none;
-    }
-    
-  
-    .navbar__title {
-      font-size: 20px;
-      line-height: 24px;
-    }
-  
-    .navbar__links li a {
-      font-size: 16px;
-      line-height: 20px;
-      display: none;
-    }
+.navbar__links li a,
+.navbar__links .button {
+  font-size: 30px;
+  line-height: 34px;
+}
 
-    .menu-celular {
-      display: block;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-    }
-    .line {
-      fill: none;
-      stroke: #fff;
-      stroke-width: 6;
-      transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .line1 {
-      stroke-dasharray: 60 207;
-      stroke-width: 6;
-    }
-    .line2 {
-      stroke-dasharray: 60 60;
-      stroke-width: 6;
-    }
-    .line3 {
-      stroke-dasharray: 60 207;
-      stroke-width: 6;
-    }
-    .opened .line1 {
-      stroke-dasharray: 90 207;
-      stroke-dashoffset: -134;
-      stroke-width: 6;
-    }
-    .opened .line2 {
-      stroke-dasharray: 1 60;
-      stroke-dashoffset: -30;
-      stroke-width: 6;
-    }
-    .opened .line3 {
-      stroke-dasharray: 90 207;
-      stroke-dashoffset: -134;
-      stroke-width: 6;
-    }
+.navbar__links .button {
+  text-transform: uppercase;
+}
 
-    
-  }
-  
-  body {
+body {
   font-size: 62.5%;
   background-color: var(--gray-100);
   overflow-x: hidden;
@@ -205,12 +121,12 @@
 .card__title,
 .button,
 .section__title {
-  font-family: 'Cupid Love', sans-serif;
+  font-family: "Cupid Love", sans-serif;
 }
 
 .section__subtitle,
 .card__ingredients {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .menu {
@@ -224,15 +140,12 @@
   padding: 15px 5%;
 }
 
-
-
-
 .section__title {
   color: var(--black);
   font-size: 60px;
   line-height: 72px;
   font-weight: 400;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .section__subtitle {
@@ -244,7 +157,6 @@
 }
 
 .section__subtitle span {
-
   font-weight: 700;
 }
 
@@ -272,25 +184,23 @@
 }
 
 .card:nth-child(1) {
-  background-image:  linear-gradient(rgba(29, 29, 29, 0.4), rgba(29, 29, 29, 0.4)), url('imagens/frango.jpg');
+  background-image: linear-gradient(rgba(29, 29, 29, 0.4), rgba(29, 29, 29, 0.4)), url("imagens/frango.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .card:nth-child(2) {
-  background-image: linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('imagens/calabresa.jpg');
-  
+  background-image: linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url("imagens/calabresa.jpg");
 }
 
 .card:nth-child(3) {
-  background-image:  linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('imagens/mista.jpg');
+  background-image: linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url("imagens/mista.jpg");
 }
 
 .card:nth-child(4) {
-  background-image:  linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('imagens/carne.jpg');
+  background-image: linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url("imagens/carne.jpg");
   background-repeat: no-repeat;
-
 }
 
 .card__title {
@@ -343,92 +253,8 @@
   border: 4px solid var(--gray-900);
   border-radius: 44px;
   padding: 44px 64px;
-  width: 45%;
+  width: 90%;
   max-width: 1200px;
-
-}
-
-#drinksID {
-  display: none;
-  left: 0;
-  justify-content: left;
-}
-
-.drinks h2 {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.drinks li {
-  font-size: 15px;
-  margin-bottom: 2px;
-}
-
-.drinks__title {
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 50px;
-  color: var(--primary);
-}
-
-.drinks__title,
-.drinks__details {
-  text-transform: uppercase;
-}
-
-.drinks__details {
-  font-size: 36px;
-  line-height: 40px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.drinks__container {
-  display: flex;
-  width: 100%;
-  position: relative;
-}
-
-.drinks__items .drinks__details:nth-child(2),
-.drinks__items .drinks__details:nth-child(5),
-.drinks__items .drinks__details:nth-child(8),
-.drinks__price .drinks__details:nth-child(2),
-.drinks__price .drinks__details:nth-child(5),
-.drinks__price .drinks__details:nth-child(8) {
-  margin-top: 24px;
-}
-
-.drinks__items .drinks__details:nth-child(2):before,
-.drinks__items .drinks__details:nth-child(5):before,
-.drinks__items .drinks__details:nth-child(8):before {
-  content: '';
-  background-color: var(--black);
-  height: 1px;
-  width: 100%;
-  position: absolute;
-  margin-top: -12px;
-}
-
-.drinks__items,
-.drinks__price {
-  display: flex;
-  flex-direction: column;
-}
-
-.drinks__items > p{
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-.cart {
-  width: 100%;
-}
-
-.section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .location {
@@ -449,7 +275,7 @@
 .location__address {
   font-size: 30px;
   line-height: 36px;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .location iframe {
@@ -510,17 +336,13 @@
 
 .hero-header span {
   color: var(--primary);
-  font-family: 'Cupid Love', sans-serif;
+  font-family: "Cupid Love", sans-serif;
 }
 
 .hero-header h1 {
   font-size: 120px;
   line-height: 100px;
-  font-family: 'Brush', sans-serif;
-}
-
-.hero-header .button {
-  text-transform: uppercase;
+  font-family: "Brush", sans-serif;
 }
 
 .hero-header__container {
@@ -530,8 +352,8 @@
   height: 30rem;
   background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url("imagens/fundopizza.jpg");
   background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-header__content {
@@ -542,110 +364,6 @@
   flex-direction: column;
   gap: 28px;
   flex: 0 0 auto;
-}
-
-@media (max-width: 1535px) {
-  .hero-header img {
-    margin-left: 0;
-  }
-
-  .hero-header__content {
-    flex: initial;
-    padding: 40px;
-  }
-}
-
-@media (max-width: 1279px) {
-  .hero-header img {
-    margin-top: 0;
-  }
-
-  .hero-header__container {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 1023px) {
-  .hero-header h1 {
-    font-size: 40px;
-    line-height: 36px;
-  }
-
-  .drinks,
-  .section__title,
-  .section__subtitle,
-  .card {
-    max-width: 450px;
-  }
-
-  .menu {
-    padding: 20px 24px 48px 24px;
-    gap: 24px;
-  }
-
-  .menu__cards {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    justify-items: center;
-  }
-
-  .section__title {
-    font-size: 32px;
-    line-height: 36px;
-  }
-
-  .section__subtitle {
-    font-size: 20px;
-    line-height: 24px;
-  }
-
-  .card {
-    padding: 20px 0;
-  }
-
-  .card__title {
-    font-size: 20px;
-    line-height: 24px;
-  }
-
-  .card__title,
-  .card__ingredients,
-  .card__price {
-    margin-right: 24px;
-  }
-
-  .card__ingredients {
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .button {
-    font-size: 20px;
-    line-height: 24px;
-  }
-
-  .drinks {
-    padding: 20px;
-  }
-
-  .drinks__details {
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .drinks__title {
-    font-size: 24px;
-    line-height: 28px;
-  }
-
-  .location__address {
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .footer__container {
-    flex-direction: column;
-  }
 }
 
 body table {
@@ -672,7 +390,6 @@ body table tbody tr td {
   padding: 18px 20px;
   font-size: 17px;
   margin-right: 9rem;
-  
 }
 
 body .produto {
@@ -784,7 +501,170 @@ aside > button {
   letter-spacing: 1px;
   font-size: 16px;
 }
+
 aside > button:hover {
   background-color: #3bc55b;
   transition: all 300ms;
+}
+
+.menu-celular {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .navbar__links {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 1rem;
+    position: relative;
+  }
+
+  .navbar svg {
+    height: 60px;
+    width: 60px;
+  }
+
+  .navbar__links {
+    flex-direction: column;
+    display: none;
+  }
+
+  .navbar__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .navbar__links li a {
+    font-size: 16px;
+    line-height: 20px;
+    display: none;
+  }
+
+  .menu-celular {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .hero-header {
+    display: none;
+  }
+
+  .menu__cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    justify-items: center;
+  }
+
+  .line {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 6;
+    transition:
+      stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+
+  .section__title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .section__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .card {
+    border-radius: 1.3rem;
+    padding: 20px 0;
+  }
+
+  .card__title {
+    font-size: 20px;
+    
+  }
+
+  .card__title,
+  .card__ingredients,
+  .card__price {
+    margin-right: 10px;
+  }
+
+  .card__ingredients {
+    display: none;
+  }
+
+  .button {
+    font-size: 18px;
+    line-height: 12px;
+  }
+
+  .drinks {
+    width: 100%;
+    padding: 20px;
+  }
+
+  body table {
+    margin: 0;
+  }
+
+  body table tbody tr td {
+    padding: 8px 8px;
+  }
+
+  iframe {
+    height: 310px;
+  }
+
+  .location__address {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    padding: 0.3rem 0;
+  }
+
+  .footer__container h2 {
+    font-size: 20px;
+  }
+
+  .footer__container p {
+    font-size: 12px;
+  }
 }
